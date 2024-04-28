@@ -272,3 +272,84 @@ if 0.4 <= p_g <= 0.6:
 else:
     print("A percentagem de raparigas nao pertence ao intervalo [0.4 , 0.6]")
 ```
+----------/ /-------------
+CICLO WHILE 
+O ciclo while é usado para repetir um bloco de código enquanto uma condição for verdadeira. 
+
+EXEMPLO:
+
+contador = 0 // a variável "contador" é inicializada a 0
+while contador < 5: 
+    print(contador)
+    contador += 1 // incrementa o valor de "contador" em 1 a cada iteração
+
+(Neste exemplo, o ciclo while repete o bloco de código dentro dele 5 vezes, imprimindo os valores de 0 a 4.)
+
+
+CICLO FOR
+
+O ciclo for é usado para iterar sobre uma sequência(como uma lista, tuplo, dicionário,etc) e realizar uma uma ação para cada elemento da sequência.
+
+EXEMPLO:
+ 
+frutas= ["maçã","banana","laranja"]
+for fruta in frutas: //itera sobre cada elemento da lista "fruta", atribuindo cada elemento à variável "fruta"
+    print(fruta)
+
+(Neste exemplo, o ciclo for itera sobre a lista "frutas" e imprime cada elemento, resultando da impressão de "maçã", "banana" e "laranja").
+
+-O for no Python é bastante flexivel e pode ser usado de várias maneiras. Uma das formas mais comuns de usar o for é juntá-lo com range() para gerar uma sequência de números.
+
+A função range() do Python cria uma sequência de números num intervalo especificado. A sintaxe básica é range(start,stop,step) onde "start" é o nº inicial da sequência (por padrão é 0) , "stop" é o número de paragem (não incluido na sequência) e "step" é o tamanho do passo entre os números (por padrão é 1).
+
+EXEMPLO:
+for i in range(5):
+    print(i)
+
+OUTPUT:
+0
+1
+2
+3
+4
+
+(Se quiseres especificar um intervalo diferente, podes passar os argumentos start e stop para range(), como em range(2, 7), para criar uma sequência de 2 a 6.)
+
+
+EXERCICIOS:
+
+1.Escreve um programa que imprima todos os números pares de 0 a 10.
+
+SOLUÇÃO:
+print("Números pares de 0 a 10:")
+for i in range(0, 11, 2):
+    print(i)
+
+2.Escreve um programa que faça uma contagem regressiva de 10 a 1 e, em seguida, imprima "Fogo!".
+SOLUÇÃO
+contador = 10
+print("Contagem regressiva:")
+while contador > 0:
+    print(contador)
+    contador -= 1
+print("Fogo!")
+
+3.Escreve um programa que calcule a soma dos números de 1 a 100.
+
+SOLUÇÃO
+soma = 0
+for i in range(1, 101):
+    soma += i
+print("A soma dos números de 1 a 100 é:", soma)
+
+4.Escreve um programa que peça ao usuário para inserir um número e, em seguida, calcula e imprime o fatorial desse número.
+
+SOLUÇÃO
+numero = int(input("Digite um número: "))
+fatorial = 1
+for i in range(1, numero + 1):
+    fatorial *= i
+print("O fatorial de", numero, "é:", fatorial)
+
+
+

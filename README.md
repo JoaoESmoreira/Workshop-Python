@@ -61,7 +61,7 @@ Qualquer outro tipo de operação, como por exemplo a raiz quadrada, deve ser im
 # Instruções de Controlo
 Imagina que tu só queres executar uma operação se determinada condição existir.
 
-![./assets/control_instruction.png](./assets/control_instruction.png)
+![[control_instruction.png]]
 
 ```python
 altura = 1.69
@@ -107,7 +107,7 @@ ATTCCGTAGC
 | *        | Concatenação de multiplas strings |
 | len      | Dimensão da minha string          |
 ## Acesso à string
-![./assets/indexing.png](./assets/indexing.png)
+![[indexing.png]]
 ```python
 In [12]: print(meu_adn[0])
 A
@@ -161,7 +161,33 @@ In [2]: mylist[0] = "maca"
 In [3]: print(mylist)
 ['maca', 'banana', 'cherry', 1, 2, 3]
 ```
+# Ciclos
+![[while.png]]
+## While
+O ciclo while é usado para repetir um bloco de código enquanto uma condição for verdadeira.
+```python
+contador = 0  
+while contador < 5: 
+	print(contador) 
+	contador += 1 
+```
+## For
+O ciclo for é usado para iterar sobre uma sequência(como uma lista, tuplo, dicionário).
+```python
+frutas= ["maçã","banana","laranja"] 
+for i in range(len(frutas)):
+	print(frutas[i])
+```
 
+O ciclo **for** não passa de um ciclo **while** `mais elegante`.
+### Funcionamento do Range
+O **range** é uma função que retorna uma sequência de números, começa a $0$ por defeito, incrementa $1$ por defeito, até um determidado valor.
+```python
+range(start, stop, step)
+
+In [3]: print(list(range(0, 10, 1)))
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
 # Problemas
 ## Método de Monte Carlo
 Tenta aproximar o número de $\pi$.
@@ -172,7 +198,7 @@ Se considerarmos apenas o primeiro quadrante do circulo a área será $\frac{\pi
 
 Sendo assim, se gerarmos um número suficientemente grande de pontos aleatórios conseguimos estimar o valor de $\pi$.
 
-![monte_carlo.png](./assets/monte_carlo.png)
+![[monte_carlo.png]]
 
 ```python
 import random
@@ -195,6 +221,20 @@ for i in range(number_generations):
         inside_circle = inside_circle + 1
 
 print(4 * inside_circle / number_generations)
+```
+## Escreve um programa que imprima todos os números pares de 0 a 10
+```python
+print("Números pares de 0 a 10:") 
+for i in range(0, 11, 2): 
+	print(i)
+```
+
+## Escreve um programa que calcule a soma dos números de 1 a 100
+```python
+soma = 0 
+for i in range(1, 101): 
+	soma = soma + i 
+	print("A soma dos números de 1 a 100 é:", soma)
 ```
 ## Concentração de um antibiótico no sangue
 A concentração do antibiótico no sangue diminui para metade a cada dia que passa.
